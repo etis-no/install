@@ -27,15 +27,5 @@ DEVICE=eth0
 ONBOOT=yes
 NM_CONTROLLED=no
 MTU=9000
-EOF
-
-cat > /etc/sysconfig/network-scripts/ifcfg-eth0.256 <<EOF
-TYPE=Ethernet
-DEVICE=eth0.256
-VLAN=yes
-ONBOOT=yes
 BRIDGE=br0
-NM_CONTROLLED=no
-MTU=9000
 EOF
-```
