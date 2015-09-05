@@ -16,7 +16,7 @@ Add the following in `<devices>`
 Now login to the console and issue the following commands.
 
 ```
-yum -y install krb5-workstation samba-winbind samba-common samba nscd samba-winbind-clients authconfig openssh-server
+yum -y install krb5-workstation samba-winbind samba-common samba nscd samba-winbind-clients authconfig openssh-server rsync nano
 authconfig --krb5realm=AD.FYRKAT.NO --enablewinbind --enablewinbindauth --smbsecurity=ads --smbrealm=AD.FYRKAT.NO --winbindjoin=Administrator --enablemkhomedir --smbworkgroup=FYRKAT --enablewinbindusedefaultdomain --winbindtemplateshell=/bin/bash --updateall
 chkconfig sshd on
 sed -i '/PasswordAuthentication/ s/yes/no/' /etc/ssh/sshd_config
